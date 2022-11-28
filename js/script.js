@@ -34,6 +34,7 @@ const { createApp } = Vue
                     dnone : "none",
                     block : "block",
                     attiva : 0,
+                    timer : 0
             }
         },
         methods:{
@@ -44,11 +45,23 @@ const { createApp } = Vue
                 }
             },
             su(){
+                
                 this.attiva++
+                this.autoPlay()
             if ( this.attiva > this.slides.length - 1){
                 this.attiva = 0
             }
-            },            
+            },   
+            autoPlay(){
+                sliderInterval = setInterval(this.su,2000)
+            },
+            autoPlay(){
+
+                this.timer = setInterval(() =>{
+                 this.su()
+                }, 1000);
+            },
+            
         }
         
 
