@@ -18,22 +18,24 @@
 <div class="container">
             <div class="slider-wrapper" tabindex="0">
                          
-                <div class="item" v-for="item in slides">
-                    <img :src="item.image" alt="{{item.title}}" />
+                <div class="item">
+                    <!-- da vedete alt perchè con item.title non mostra il nome -->
+                    <!-- ho dovuto aggiungere l'id nell array perchè non riuscivo a prendere il numero dell'iterazione -->
+                    <img v-for="immagine in slides" :src="immagine.image" :id="immagine.id" alt=""  />
                     <div class="text">
                          
-                        <h3>{{item.title}}</h3>
+                        <!-- <h3>{{item.title}}</h3> -->
                         <p>
-                            {{item.text}}
+                            <!-- {{item.text}} -->
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
+                    <div class="prev" @click="slideUp"></div>
                     <div class="next"></div>
                     <div class="thumb" v-for="thumb in slides">
-                        <img :src="thumb.image" alt="{{thumb.title}}" />
+                        <img :src="thumb.image" alt="" />
                     </div>
                   
                 </div>
