@@ -21,18 +21,20 @@
                 <div class="item">
                     <!-- da vedete alt perchè con item.title non mostra il nome -->
                     <!-- ho dovuto aggiungere l'id nell array perchè non riuscivo a prendere il numero dell'iterazione -->
-                    <img v-for="immagine in slides" :src="immagine.image" :id="immagine.id" alt=""  />
+                    <img v-for="immagine in slides" :src="immagine.image" :id="immagine.id" alt="" :class="dnone" />
                     <div class="text">
                          
-                        <!-- <h3>{{item.title}}</h3> -->
+                        <h3>
+                            <!-- img.title -->
+                        </h3>
                         <p>
-                            <!-- {{item.text}} -->
+                            <!-- {{immagine.text}} -->
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="slideUp"></div>
+                    <div class="prev"></div>
                     <div class="next"></div>
                     <div class="thumb" v-for="thumb in slides">
                         <img :src="thumb.image" alt="" />
