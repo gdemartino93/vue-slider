@@ -18,17 +18,17 @@
 <div class="container">
             <div class="slider-wrapper" tabindex="0">
                          
-                <div class="item">
+                <div class="item" v-for="item in slides">
                     <!-- da vedete alt perchè con item.title non mostra il nome -->
                     <!-- ho dovuto aggiungere l'id nell array perchè non riuscivo a prendere il numero dell'iterazione -->
-                    <img v-for="immagine in slides" :src="immagine.image" :id="immagine.id" alt="" :class="dnone" />
+                    <img :src="item.image" :id="item.id" alt="" :class="" />
                     <div class="text">
                          
                         <h3>
-                            <!-- img.title -->
+                            {{item.title}}
                         </h3>
                         <p>
-                            <!-- {{immagine.text}} -->
+                            {{item.text}}
                         </p>
                     </div>
                 </div>
