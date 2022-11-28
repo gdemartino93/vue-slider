@@ -36,7 +36,7 @@
                     <div class="prev" @click="giu" ></div>
                     <div class="next" @click="su"></div>
                     <div class="thumb" v-for="(thumb,i) in slides" :class="i=== attiva ? 'active' : 'block'">
-                        <img :src="thumb.image" alt="" />
+                        <img :src="thumb.image" alt=""  :id='i'>
                     </div>
                 </div>
 

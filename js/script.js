@@ -34,8 +34,6 @@ const { createApp } = Vue
                     dnone : "none",
                     block : "block",
                     attiva : 0,
-                    message : "ciao ciao",
-                    timer : null
             }
         },
         methods:{
@@ -50,9 +48,7 @@ const { createApp } = Vue
             if ( this.attiva > this.slides.length - 1){
                 this.attiva = 0
             }
-            },   
-            
-         
+            },            
         }
         
 
