@@ -53,6 +53,7 @@
 .thumb.active {
     border: 2px solid #ccc;
     opacity: 1;
+    
 }
 
 .prev, .next {
@@ -110,4 +111,8 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
 }
 .none{
     display: none;
+}
+
+.thumb{
+    
 }
