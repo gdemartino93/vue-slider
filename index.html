@@ -19,15 +19,12 @@
             <div class="slider-wrapper" tabindex="0">
                          
                 <div class="item" v-for="item in slides">
-                    <img src="img/01.webp" alt="" />
+                    <img :src="item.image" alt="{{item.title}}" />
                     <div class="text">
                          
-                        <h3>Spiderman</h3>
+                        <h3>{{item.title}}</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
+                            {{item.text}}
                         </p>
                     </div>
                 </div>
@@ -36,7 +33,7 @@
                     <div class="prev"></div>
                     <div class="next"></div>
                     <div class="thumb" v-for="thumb in slides">
-                        <img src="img/01.webp" alt="Svezia" />
+                        <img :src="thumb.image" alt="{{thumb.title}}" />
                     </div>
                   
                 </div>
