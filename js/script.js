@@ -1,3 +1,4 @@
+// Vue.js | Mouseover & Mouseleave per il terzo bonus
 const { createApp } = Vue 
 
     createApp({
@@ -47,23 +48,18 @@ const { createApp } = Vue
             su(){
                 
                 this.attiva++
-                this.autoPlay()
-            if ( this.attiva > this.slides.length - 1){
-                this.attiva = 0
-            }
+                // this.autoPlay()
+                if ( this.attiva > this.slides.length - 1){
+                    this.attiva = 0
+                }
             },   
             autoPlay(){
-                sliderInterval = setInterval(this.su,2000)
+                setInterval(this.su,2000)
             },
-            autoPlay(){
-
-                this.timer = setInterval(() =>{
-                 this.su()
-                }, 1000);
-            },
-            
+        },
+        mounted(){
+            this.autoPlay()
         }
-        
 
     }).mount("#app")
 
